@@ -48,7 +48,7 @@ def download_song(title, artist):
                     'preferredcodec': 'mp3',
                     'preferredquality': '320', # 비트율은 320으로 지정하기
                 }],
-                'ffmpeg_location': './ffmpeg-6.0-full_build/bin', 
+                'ffmpeg_location': 'C:/Program Files/ffmpeg-6.1-full_build/bin', 
                 'outtmpl': f"./mp3/{file_name}.%(ext)s",
                 'quiet': True, # 내려받는 도중에 출력되는 로그 숨기기
             }

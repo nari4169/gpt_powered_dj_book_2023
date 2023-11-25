@@ -34,7 +34,7 @@ def main():
         popup.title("")
         
         # 팝업 창의 내용
-        label=tk.Label(popup, text=message, font=("맑은 고딕", 12))
+        label=tk.Label(popup, text=message, font=("맑은 고딕", 14))
         label.pack(expand=True, fill=tk.BOTH)
         
         # 팝업 창의 크기 조절하기
@@ -87,7 +87,7 @@ def main():
     window=tk.Tk()
     window.title("GPT Powered DJ")
 
-    font=("맑은 고딕", 10)
+    font=("맑은 고딕", 14)
     
     conversation=scrolledtext.ScrolledText(window, wrap=tk.WORD, bg='#f0f0f0', font=font)
     # width, height를 없애고 배경색 지정하기(2)

@@ -48,7 +48,7 @@ def download_song(title, artist):
                     'preferredcodec': 'mp3',
                     'preferredquality': '320', # 비트율은 320으로 지정하기
                 }],
-                'ffmpeg_location': './ffmpeg-6.0-full_build/bin', 
+                'ffmpeg_location': 'C:/Program Files/ffmpeg-6.1-full_build/bin', 
                 'outtmpl': f"./mp3/{file_name}.%(ext)s",
                 'quiet': True, # 내려받는 도중에 출력되는 로그 숨기기
             }
@@ -114,7 +114,7 @@ def download_songs_in_csv(csv_file):
 
 if __name__ == '__main__':
     # 입력 파일의 경로 설정하기
-    file_path='./playlist/2010s_hiphop.csv'
+    file_path='C:/Users/nari4/Music/playList.csv'
     # file_path='./playlist/korean_80s_rock.csv'
     # CSV 파일에 있는 노래 내려받기
     result=download_songs_in_csv(file_path)

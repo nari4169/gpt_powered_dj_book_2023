@@ -2,6 +2,8 @@ import os
 from moviepy.editor import *
 import pandas as pd
 
+basePath = 'C:/Users/nari4/Music/'
+
 def create_video(mp3_path, img_path):
     # 오디오 파일과 이미지 파일 열기
     audio_clip=AudioFileClip(mp3_path)
@@ -24,7 +26,7 @@ def create_video(mp3_path, img_path):
     print(file_name)
     
     # 동영상 저장하기
-    video_path=f"./videos/{file_name}.mp4"
+    video_path=f"{basePath}videos/{file_name}.mp4"
     video_clip.write_videofile(video_path, fps=24)
     
     return os.path.abspath(video_path)
@@ -65,12 +67,12 @@ def generate_video_using_images(csv_file):
     # CSV 파일명을 이용해 동영상 파일명 만들기
     dir, file_full_name=os.path.split(csv_file) # 경로와 파일명 분리하기
     file_name, ext=os.path.splitext(file_full_name) # 파일명과 확장자 분리하기
-    video_file_path=f'./videos/{file_name}.mp4'
+    video_file_path=f'{basePath}videos/{file_name}.mp4'
  
     merge_videos(videos, video_file_path)
     return video_file_path
 
 if __name__ == '__main__':
-    video_file_path = generate_video_using_images('./playlist/2010s_hiphop.csv')
+    video_file_path = generate_video_using_images(f'{basePath}play1.csv')
     print(video_file_path)
     
